@@ -1,0 +1,66 @@
+MELODIC ISLES: NIGHTFALL RESONANCE - RELEASE QA
+Date: 2026-10-09
+
+RESULT: PASS
+
+CONTENT COUNTS
+- 10 total destinations
+- 8 main islands
+- 2 late-game Islets
+- 105 species
+- 420 Common/Rare/Epic/Legendary collection slots
+- 6 limited Seasonal species
+- Maximum breed/incubation time: 60 minutes
+- Active on 2026-10-09: Nightfall Masquerade and Resonance Week
+
+STATIC CHECKS
+PASS - Every JavaScript file parses with Node syntax checking.
+PASS - manifest.webmanifest parses as valid JSON.
+PASS - No external HTTP/CDN runtime URLs in index.html, style.css, catalog.js, monster-art.js, events.js, or game.js.
+PASS - No emoji/pictograph code points were found in game text/source files.
+PASS - Service worker cache includes the event system and core offline files.
+PASS - ZIP layout is designed to be flat at repository root.
+
+BROWSER QA
+The exact project HTML, CSS, and JavaScript were rendered in headless Chromium. The host environment blocks browser navigation to localhost, so QA injects the exact project files into a Chromium page instead of using a local URL. The game logic, DOM, CSS, SVG art, Web Audio setup, and interactions are still executed by Chromium.
+
+PASS - All 10 destinations rendered without page errors.
+PASS - A performance started successfully on every destination.
+PASS - Sound-triggered monster animation classes fired on every destination.
+PASS - Market opened.
+PASS - Breeding opened.
+PASS - Collection opened.
+PASS - Quests opened.
+PASS - Events opened.
+PASS - Settings opened.
+PASS - Island Map opened.
+PASS - Island Mastery opened.
+PASS - Grand Resonator screen opened.
+PASS - Nightfall Masquerade visible as active.
+PASS - Resonance Week visible as active.
+PASS - Gourdhowl visible during Nightfall.
+PASS - Candlejaw visible during Nightfall.
+PASS - Rare SVG output differs structurally from Common and includes rarity geometry.
+PASS - Epic SVG output differs structurally from Common and includes rarity geometry.
+PASS - No browser page errors were observed during the full QA run.
+
+DESTINATION PERFORMANCE QA
+Verdant Groove: 9 demo performers rendered; sound animation fired.
+Frostbell Atoll: 9 demo performers rendered; sound animation fired.
+Ember Circuit: 9 demo performers rendered; sound animation fired.
+Moonlit Reverie: 9 demo performers rendered; sound animation fired.
+Tideglass Reef: 9 demo performers rendered; sound animation fired.
+Bramble Brassworks: 9 demo performers rendered; sound animation fired.
+Gloamforge Hollow: 9 demo performers rendered; sound animation fired.
+Starfall Bastion: 10 demo performers rendered; sound animation fired.
+Prism Hand Islet: 8 demo performers rendered; sound animation fired.
+Null Crown Islet: 8 demo performers rendered; sound animation fired.
+
+FRESH RUNNING-BUILD SCREENSHOTS
+- test-1-bramble-performance.png
+- test-2-live-events.png
+- test-3-grand-resonator.png
+- test-4-prism-islet.png
+- test-5-null-crown-ipad.png
+
+The screenshots were captured after the final Nightfall content/art pass from the same code included in the release ZIP.
